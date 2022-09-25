@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from "../axios"
 import FactSlide from './FactSlide';
+import { Link, useNavigate } from "react-router-dom"
 function Home() {
     const [array, setArray] = useState([]);
     const [click, setClick] = useState(false);
     const [factstate, setFactstate] = useState(false);
     const [animeName, setAnimeName] = useState("")
 
+    const navigate = useNavigate()
     const returnAnimeNames = async () => {
         setClick(!click);
         array.data.map((item) => (
@@ -46,7 +48,7 @@ function Home() {
                 {factstate && <FactSlide anime_name={animeName} />}
             </div >
 
-            <footer className='bg-slate-700 p-4 font-mono font-bold text-center'>Developed By @GAUTHAM KRISHNA <br />For Kite Frontend Internship</footer>
+            <footer className='bg-slate-700 p-4 font-mono font-bold text-center text-yellow-500'>Developed By <a href="https://www.instagram.com/_thegauthamkrishhna._/s"> <p className='font-extrabold text-yellow-100'> @GAUTHAM KRISHNA</p> </a>For Kite Frontend Internship</footer>
         </div>
 
 
