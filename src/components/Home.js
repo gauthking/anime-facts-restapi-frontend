@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import axios from "../axios"
 import FactSlide from './FactSlide';
-import { Link, useNavigate } from "react-router-dom"
 function Home() {
     const [array, setArray] = useState([]);
     const [click, setClick] = useState(false);
     const [factstate, setFactstate] = useState(false);
     const [animeName, setAnimeName] = useState("")
 
-    const navigate = useNavigate()
     const returnAnimeNames = async () => {
         setClick(!click);
         array.data.map((item) => (
@@ -32,9 +30,9 @@ function Home() {
 
     return (
         <div className='flex flex-col'>
-            <div className='main flex'>
-                <div className='navbar h-[150vh] bg-yellow-300 p-8 flex flex-col items-center w-80 overflow-x-hidden rounded-r-lg scrollbar-thumb-blue-200 scrollbar-track-gray-100'>
-                    <div className='mb-auto border-b-2 p-2 border-black mt-0'>
+            <div className='main sm:flex sm:flex-row flex flex-col'>
+                <div className='navbar sm:p-1 h-[150vh] bg-yellow-300 p-8 flex flex-col items-center lg:w-80 lg:overflow-x-hidden lg:rounded-r-lg lg:scrollbar-thumb-blue-200 lg:scrollbar-track-gray-100'>
+                    <div className='mb-auto flex flex-row border-b-2 p-2 border-black mt-0'>
                         <button onClick={returnAnimeNames} className='bg-black rounded-md p-2 m-4 text-white hover:scale-110 transition-all ease-in-out font-mono'>{!click ? "SHOW ANIME NAMES" : "HIDE ANIME NAMES"}</button>
                     </div>
                     <div className='flex flex-col'>
