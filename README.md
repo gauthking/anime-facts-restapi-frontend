@@ -2,7 +2,7 @@
 
 ***To run this app on dev server*** - `npm run start`
 
-***Deployed Site*** - https://the-awesome-gauthking-site.netlify.app/
+***Deployed Site*** - https://the-awesome-gauthking-site.netlify.app/ (api's ded)
 
 ### Frontend Tools Used
 
